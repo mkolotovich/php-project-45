@@ -1,0 +1,16 @@
+{
+    "name": "hexlet/code",
+    "description": "Set of 5 brain games for brain training.",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mike Kolotovich",
+            "email": "k2punk@gmail.com"
+        }
+    ],
+    "require": {}
+}
