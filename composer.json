@@ -1,6 +1,10 @@
 {
     "name": "hexlet/code",
+    "bin": [
+        "bin/brain-games"
+    ],
     "description": "Set of 5 brain games for brain training.",
+    "license": "ISC",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
