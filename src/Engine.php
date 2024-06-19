@@ -17,7 +17,7 @@ function playGame($question, $generateRoundData)
         [$roundQuestion, $rAns] = $generateRoundData[$correctAnswersCount];
         line('Question: %s', $roundQuestion);
         $ans = prompt('Your answer ');
-        if ($ans == $rAns) {
+        if ($ans === $rAns) {
             line('Correct!');
             $correctAnswersCount += 1;
         } else {

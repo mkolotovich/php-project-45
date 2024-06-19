@@ -3,3 +3,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/4b3738a3efb92e2079f7/maintainability)](https://codeclimate.com/github/mkolotovich/php-project-45/maintainability)
 [![asciicast](https://asciinema.org/a/ubKCAAN1XAlEuC33twAUOiR1c.svg)](https://asciinema.org/a/ubKCAAN1XAlEuC33twAUOiR1c)
 [![asciicast](https://asciinema.org/a/CQtxcIhuiMXorASRlfSJh9qwA.svg)](https://asciinema.org/a/CQtxcIhuiMXorASRlfSJh9qwA)
+[![asciicast](https://asciinema.org/a/JXL9YHkZWgoINopxrxI9dVHuL.svg)](https://asciinema.org/a/JXL9YHkZWgoINopxrxI9dVHuL)
