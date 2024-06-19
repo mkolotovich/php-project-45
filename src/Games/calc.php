@@ -5,7 +5,7 @@ namespace BrainGames\Calc;
 require_once(__DIR__ . '/../../src/Engine.php');
 use function BrainGames\Engine\playGame;
 
-function generateGameData(): array
+function generateGameData()
 {
     $operations = [['+', fn($a, $b) => $a + $b], ['-', fn($a, $b) =>$a - $b], ["*", fn($a, $b) => $a * $b]];
     $firstNum = rand(1, 25);
