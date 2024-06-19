@@ -14,7 +14,7 @@ function playGame($question, $generateRoundData)
     $winAnswersCount = 3;
     line($question);
     while ($correctAnswersCount < $winAnswersCount) {
-        [$roundQuestion, $rAns] = $generateRoundData;
+        [$roundQuestion, $rAns] = $generateRoundData[$correctAnswersCount];
         line('Question: %s', $roundQuestion);
         $ans = prompt('Your answer ');
         if ($ans == $rAns) {

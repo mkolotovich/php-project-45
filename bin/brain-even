@@ -12,8 +12,8 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-require_once(__DIR__ . '/../src/even.php');
+require_once(__DIR__ . '/../src/Games/even.php');
 
-use function BrainGames\Even\evenGame;
+use function BrainGames\Even\startGame;
 
-evenGame();
+startGame();

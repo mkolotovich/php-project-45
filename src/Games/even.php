@@ -2,25 +2,28 @@
 
 namespace BrainGames\Even;
 
-require_once(__DIR__ . '/../src/Engine.php');
+require_once(__DIR__ . '/../../src/Engine.php');
 use function BrainGames\Engine\playGame;
 
-function isEven($number) {
+function isEven($number): bool
+{
     return $number % 2 == 0;
 }
 
-function generateGameData() {
+function generateGameData(): array
+{
     $question = rand(0, 20);
     $answer = isEven($question) ? 'yes' : 'no';
     return [$question, $answer];
 }
 
-function startGame() {
+function startGame()
+{
     $question = 'Answer "yes" if the number is even, otherwise answer "no".';
     $gameData = [];
     $startRound = 0;
     $finishRound = 3;
-    while ($startRound < $finishRound) {   
+    while ($startRound < $finishRound) {
         $gameData[] = generateGameData();
         $startRound += 1;
     }
