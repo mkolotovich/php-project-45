@@ -20,5 +20,12 @@ function generateGameData()
 function startGame()
 {
     $question = 'What is the result of the expression?';
-    playGame($question, generateGameData());
+    $gameData = [];
+    $startRound = 0;
+    $finishRound = 3;
+    while ($startRound < $finishRound) {   
+        $gameData[] = generateGameData();
+        $startRound += 1;
+    }
+    playGame($question, $gameData);
 }
