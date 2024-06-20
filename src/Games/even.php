@@ -5,12 +5,12 @@ namespace BrainGames\Even;
 require_once(__DIR__ . '/../../src/Engine.php');
 use function BrainGames\Engine\playGame;
 
-function isEven($number): bool
+function isEven(int $number)
 {
     return $number % 2 == 0;
 }
 
-function generateGameData(): array
+function generateGameData()
 {
     $question = rand(0, 20);
     $answer = isEven($question) ? 'yes' : 'no';

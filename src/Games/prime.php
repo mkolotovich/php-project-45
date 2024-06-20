@@ -5,7 +5,7 @@ namespace BrainGames\Prime;
 require_once(__DIR__ . '/../../src/Engine.php');
 use function BrainGames\Engine\playGame;
 
-function isPrime($num)
+function isPrime(int $num)
 {
     if ($num < 2) {
         return false;

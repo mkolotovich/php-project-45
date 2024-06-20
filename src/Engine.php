@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function playGame($question, $generateRoundData)
+function playGame(string $question, array $generateRoundData)
 {
     $correctAnswersCount = 0;
     line('Welcome to the Brain Game!');
@@ -21,8 +21,8 @@ function playGame($question, $generateRoundData)
             line('Correct!');
             $correctAnswersCount += 1;
         } else {
-            line("'{$ans}' is wrong answer ;(. Correct answer was '{$rAns}'.");
-            line("Let's try again, {$name}!");
+            line("'$ans' is wrong answer ;(. Correct answer was '$rAns'.");
+            line("Let's try again, $name!");
             return;
         }
     }

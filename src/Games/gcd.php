@@ -5,7 +5,7 @@ namespace BrainGames\Gcd;
 require_once(__DIR__ . '/../../src/Engine.php');
 use function BrainGames\Engine\playGame;
 
-function findGcd($firstNum, $secondNum)
+function findGcd(int $firstNum, int $secondNum)
 {
     $bigger =  $firstNum > $secondNum ? $firstNum  : $secondNum;
     $smaller = $firstNum > $secondNum ? $secondNum : $firstNum;

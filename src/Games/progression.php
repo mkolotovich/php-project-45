@@ -5,7 +5,7 @@ namespace BrainGames\Progression;
 require_once(__DIR__ . '/../../src/Engine.php');
 use function BrainGames\Engine\playGame;
 
-function makeProgression($progressionStart, $step, $length)
+function makeProgression(int $progressionStart, int $step, int $length)
 {
     $progression = [];
     $progressionItem = $progressionStart;
