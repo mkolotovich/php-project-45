@@ -2,7 +2,6 @@
 
 namespace BrainGames\Calc;
 
-require_once(__DIR__ . '/../../src/Engine.php');
 use function BrainGames\Engine\playGame;
 
 function generateGameData()
@@ -21,11 +20,9 @@ function startGame()
 {
     $question = 'What is the result of the expression?';
     $gameData = [];
-    $startRound = 0;
     $finishRound = 3;
-    while ($startRound < $finishRound) {
+    for ($startRound = 0; $startRound < $finishRound; $startRound += 1) {
         $gameData[] = generateGameData();
-        $startRound += 1;
     }
     playGame($question, $gameData);
 }

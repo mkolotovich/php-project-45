@@ -2,7 +2,6 @@
 
 namespace BrainGames\Even;
 
-require_once(__DIR__ . '/../../src/Engine.php');
 use function BrainGames\Engine\playGame;
 
 function isEven(int $number)
@@ -21,11 +20,9 @@ function startGame()
 {
     $question = 'Answer "yes" if the number is even, otherwise answer "no".';
     $gameData = [];
-    $startRound = 0;
     $finishRound = 3;
-    while ($startRound < $finishRound) {
+    for ($startRound = 0; $startRound < $finishRound; $startRound += 1) {
         $gameData[] = generateGameData();
-        $startRound += 1;
     }
     playGame($question, $gameData);
 }

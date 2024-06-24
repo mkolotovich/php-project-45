@@ -13,7 +13,16 @@
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
-        }
+        },
+        "files": [
+            "src/Games/even.php",
+            "src/Games/calc.php",
+            "src/Cli.php",
+            "src/Games/gcd.php",
+            "src/Games/prime.php",
+            "src/Games/progression.php",
+            "src/Engine.php"
+        ]
     },
     "scripts": {
         "phpcs": "phpcs --standard=PSR2"

@@ -2,7 +2,6 @@
 
 namespace BrainGames\Gcd;
 
-require_once(__DIR__ . '/../../src/Engine.php');
 use function BrainGames\Engine\playGame;
 
 function findGcd(int $firstNum, int $secondNum)
@@ -28,11 +27,9 @@ function startGame()
 {
     $question = 'Find the greatest common divisor of given numbers.';
     $gameData = [];
-    $startRound = 0;
     $finishRound = 3;
-    while ($startRound < $finishRound) {
+    for ($startRound = 0; $startRound < $finishRound; $startRound += 1) {
         $gameData[] = generateGameData();
-        $startRound += 1;
     }
     playGame($question, $gameData);
 }

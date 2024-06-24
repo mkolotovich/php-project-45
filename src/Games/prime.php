@@ -2,7 +2,6 @@
 
 namespace BrainGames\Prime;
 
-require_once(__DIR__ . '/../../src/Engine.php');
 use function BrainGames\Engine\playGame;
 
 function isPrime(int $num)
@@ -31,11 +30,9 @@ function startGame()
 {
     $question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $gameData = [];
-    $startRound = 0;
     $finishRound = 3;
-    while ($startRound < $finishRound) {
+    for ($startRound = 0; $startRound < $finishRound; $startRound += 1) {
         $gameData[] = generateGameData();
-        $startRound += 1;
     }
     playGame($question, $gameData);
 }
