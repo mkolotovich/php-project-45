@@ -4,9 +4,13 @@ namespace BrainGames\Calc;
 
 use function BrainGames\Engine\playGame;
 
-function generateGameData()
+function generateGameData(): array
 {
-    $operations = [['+', fn($a, $b) => $a + $b], ['-', fn($a, $b) =>$a - $b], ["*", fn($a, $b) => $a * $b]];
+    $operations = [
+        ['+', fn($a, $b) => $a + $b],
+        ['-', fn($a, $b) =>$a - $b],
+        ["*", fn($a, $b) => $a * $b]
+    ];
     $firstNum = rand(1, 25);
     $signsIndex = rand(0, count($operations) - 1);
     $secondNum = rand(1, 25);
@@ -16,7 +20,7 @@ function generateGameData()
     return [$question, $answer];
 }
 
-function startGame()
+function startGame(): void
 {
     $question = 'What is the result of the expression?';
     $gameData = [];

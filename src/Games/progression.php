@@ -4,7 +4,7 @@ namespace BrainGames\Progression;
 
 use function BrainGames\Engine\playGame;
 
-function makeProgression(int $progressionStart, int $step, int $length)
+function makeProgression(int $progressionStart, int $step, int $length): array
 {
     $progression = [];
     $progressionItem = $progressionStart;
@@ -17,7 +17,7 @@ function makeProgression(int $progressionStart, int $step, int $length)
     return $progression;
 }
 
-function generateGameData()
+function generateGameData(): array
 {
     $minLength = 5;
     $progressionStart = 5;
@@ -31,7 +31,7 @@ function generateGameData()
     return [$question, $answer];
 }
 
-function startGame()
+function startGame(): void
 {
     $question = 'What number is missing in the progression?';
     $gameData = [];

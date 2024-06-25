@@ -4,19 +4,19 @@ namespace BrainGames\Even;
 
 use function BrainGames\Engine\playGame;
 
-function isEven(int $number)
+function isEven(int $number): bool
 {
     return $number % 2 == 0;
 }
 
-function generateGameData()
+function generateGameData(): array
 {
     $question = rand(0, 20);
     $answer = isEven($question) ? 'yes' : 'no';
     return [$question, $answer];
 }
 
-function startGame()
+function startGame(): void
 {
     $question = 'Answer "yes" if the number is even, otherwise answer "no".';
     $gameData = [];

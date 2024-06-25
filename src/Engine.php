@@ -5,23 +5,21 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function playGame(string $question, array $generateRoundData)
+function playGame(string $question, array $roundData): void
 {
-    $correctAnswersCount = 0;
     line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name', false, '? ');
+    $name = prompt('May I have your name?', '', " ");
     line("Hello, %s!", $name);
     $winAnswersCount = 3;
     line($question);
-    while ($correctAnswersCount < $winAnswersCount) {
-        [$roundQuestion, $rAns] = $generateRoundData[$correctAnswersCount];
+    for ($correctAnswersCount = 0; $correctAnswersCount < $winAnswersCount; $correctAnswersCount += 1) {
+        [$roundQuestion, $correctAnswer] = $roundData[$correctAnswersCount];
         line('Question: %s', $roundQuestion);
-        $ans = prompt('Your answer ');
-        if ($ans === $rAns) {
+        $answer = prompt('Your answer ');
+        if ($answer === $correctAnswer) {
             line('Correct!');
-            $correctAnswersCount += 1;
         } else {
-            line("'$ans' is wrong answer ;(. Correct answer was '$rAns'.");
+            line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
             line("Let's try again, $name!");
             return;
         }

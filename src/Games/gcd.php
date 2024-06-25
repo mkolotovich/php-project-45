@@ -4,7 +4,7 @@ namespace BrainGames\Gcd;
 
 use function BrainGames\Engine\playGame;
 
-function findGcd(int $firstNum, int $secondNum)
+function findGcd(int $firstNum, int $secondNum): int
 {
     $bigger =  $firstNum > $secondNum ? $firstNum  : $secondNum;
     $smaller = $firstNum > $secondNum ? $secondNum : $firstNum;
@@ -14,16 +14,16 @@ function findGcd(int $firstNum, int $secondNum)
     return findGcd($smaller, $bigger % $smaller);
 }
 
-function generateGameData()
+function generateGameData(): array
 {
     $firstNum = rand(1, 101);
     $secondNum = rand(1, 101);
-    $question = "{$firstNum} {$secondNum}";
+    $question = "$firstNum $secondNum";
     $answer = (string) findGcd($firstNum, $secondNum);
     return [$question, $answer];
 }
 
-function startGame()
+function startGame(): void
 {
     $question = 'Find the greatest common divisor of given numbers.';
     $gameData = [];
