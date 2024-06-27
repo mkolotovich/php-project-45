@@ -16,13 +16,12 @@ function playGame(string $question, array $roundData): void
         [$roundQuestion, $correctAnswer] = $roundData[$correctAnswersCount];
         line('Question: %s', $roundQuestion);
         $answer = prompt('Your answer ');
-        if ($answer === $correctAnswer) {
-            line('Correct!');
-        } else {
+        if ($answer !== $correctAnswer) {
             line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
             line("Let's try again, $name!");
             return;
         }
+        line('Correct!');
     }
     line('Congratulations, %s!', $name);
 }

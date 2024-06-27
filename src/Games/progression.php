@@ -8,11 +8,9 @@ function makeProgression(int $progressionStart, int $step, int $length): array
 {
     $progression = [];
     $progressionItem = $progressionStart;
-    $i = 0;
-    while ($i < $length) {
+    for ($i = 0; $i < $length; $i += 1) {
         $progression[] = $progressionItem;
         $progressionItem += $step;
-        $i += 1;
     }
     return $progression;
 }
